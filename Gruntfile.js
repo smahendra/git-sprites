@@ -23,8 +23,14 @@ module.exports = function(grunt) {
                 options: {
                     shape:{
                             spacing: {         
-                            padding: 5  
-                        }   
+                                padding: 5  
+                            }
+                            /*dimension: {           
+                                maxWidth: 500,  
+                                maxHeight: 500, 
+                                precision: 2,  
+                                attributes: false, 
+                        } */
                     },
                     mode: {
                         css: {      
