@@ -7,20 +7,23 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         
-        clean: ["output/css"],
+        clean: {
+            directory: ["output/css"],
+            temp :["<%= svg_sprite_path %>/*sprite.css*", "<%= png_sprite_path %>/*sprite.css*" ]
+        },
 
         svg_sprite: {
             basic: {
                 // Target basics 
                 expand: true,
-                cwd: 'assets',
+                cwd: '<%= input_path %>',
                 src: ['**/*.svg'],
-                dest: 'output',
+                dest: '<%= output_path %>',
                 // Target options 
                 options: {
                     shape:{
                             spacing: {         
-                            padding: 5 // Add padding 
+                            padding: 5  
                         }   
                     },
                     mode: {
@@ -45,16 +48,25 @@ module.exports = function(grunt) {
             },
             dist: {
                 files: [{
-                    src: ['output/css/svg/*.svg'],
-                    dest: "output/css/svg/compressed.svg"
+                    src: ['<%= svg_sprite_path %>/*.svg'],
+                    dest: "<%= svg_sprite_path %>/compressed.svg"
                 }]
             }
+        },
+        svg2png: {
+        all: {
+            files: [
+                { cwd: '<%= svg_sprite_path %>/', src: ['**/*.svg'], dest: '<%= png_sprite_path %>' }
+            ]
         }
+        },
+        //varaibles
+        input_path: 'assets',
+        output_path: 'output',
+        svg_sprite_path: 'output/css/svg',
+        png_sprite_path: 'output/css/png'
     });
 
-    //grunt.loadNpmTasks('grunt-svg-sprite');
-    //grunt.loadNpmTasks('grunt-svgmin');
-
-    grunt.registerTask('default', ['clean','svg_sprite', 'svgmin']);
+    grunt.registerTask('default', ['clean:directory','svg_sprite', 'svgmin', 'svg2png', 'clean:temp']);
 
 };
