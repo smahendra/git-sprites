@@ -15,7 +15,7 @@ module.exports = function(grunt) {
                 expand: true,
                 cwd: 'assets',
                 src: ['**/*.svg'],
-                dest: 'out',
+                dest: 'output',
                 // Target options 
                 options: {
                     shape:{
