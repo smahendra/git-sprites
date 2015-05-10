@@ -3,44 +3,37 @@ module.exports = function(grunt) {
    "use strict";
    require("matchdep").filterDev("grunt-*").forEach(grunt.loadNpmTasks);
 
-
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-        
+
         clean: {
             directory: ["output/css"],
             temp :["<%= svg_sprite_path %>/*sprite.css*", "<%= png_sprite_path %>/*sprite.css*" ]
         },
-
         svg_sprite: {
             basic: {
-                // Target basics 
+                // Target basics
                 expand: true,
                 cwd: '<%= input_path %>',
                 src: ['**/*.svg'],
                 dest: '<%= output_path %>',
-                // Target options 
+                // Target options
                 options: {
                     shape:{
-                            spacing: {         
-                                padding: 5  
+                            spacing: {
+                                padding: 5
                             }
-                            /*dimension: {           
-                                maxWidth: 500,  
-                                maxHeight: 500, 
-                                precision: 2,  
-                                attributes: false, 
-                        } */
-                    },
+                          },
                     mode: {
-                        css: {      
+                        css: {
+                            layout: 'packed',
                             render: {
-                                css : false  
+                                css : true
+                             }
                             }
+                          }
                         }
-                    }
-                }
-            }
+                   }
         },
          svgmin: {
             options: {
@@ -74,5 +67,4 @@ module.exports = function(grunt) {
     });
 
     grunt.registerTask('default', ['clean:directory','svg_sprite', 'svgmin', 'svg2png', 'clean:temp']);
-
 };
