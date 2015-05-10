@@ -27,11 +27,10 @@ That is it. You can now generate SVG sprites.
 After cloning a copy of this repository to your local machine you can make changes to the local Grunt file for tool configuration changes. Some helpful config changes below.
 1. Create Vertical, Horizontol or Package SVG Sprite
    Open your 'Gruntfile.js'
-                  ```
+```
 function test() {
   console.log("notice the blank line before this function?");
 }
 ```
 
 
-tested with - node: v0.12.2 and v0.10.33.
