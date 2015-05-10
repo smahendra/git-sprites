@@ -49,4 +49,4 @@ This tool uses the following npm packages:
     "grunt-svg2png"
     "grunt-svgmin"
 
-tested with - node: v0.12.2 and v0.10.33.
+Tested with - node: v0.12.2 and v0.10.33.
