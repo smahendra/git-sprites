@@ -6,7 +6,7 @@ Below are instructions to get up and running with the tool on your local machine
 Step 1 ) Install the latest version of NodeJS: http://nodejs.org. You can also install node.js via command line tool of your choice (PowerShell, Terminal, Bash etc). Open your command line tool of choice and run: sudo npm install npm -g
 Note: Make sure you have it installed node.js globally. This will enable you to run npm directives. If you have node.js and Grunt skip to step 3.
 
-Step 2)Once node is installed you will need to install Grunt : http://gruntjs.com/getting-started 
+Step 2) Once node is installed you will need to install Grunt : http://gruntjs.com/getting-started 
 The easiest way is to follow these steps: Open your command line tool of choice and run: sudo npm install -g grunt-cli
 
 Excellent! You now have Node and Grunt installed on your system and ready to go.
@@ -24,5 +24,11 @@ That is it. You can now generate SVG sprites.
 4. Creates a fallback PNG file. You need to compress the PNG - try Tiny PNG.
 
 #Config Options:
+After cloning a copy of this repository to your local machine you can make changes to the local Grunt file for tool configuration changes. Some helpful config changes below.
+1. Create Vertical, Horizontol or Package SVG Sprite
+   Open your 'Gruntfile.js'
+                  css: {
+                            layout: 'packed',
+
 
 tested with - node: v0.12.2 and v0.10.33.
