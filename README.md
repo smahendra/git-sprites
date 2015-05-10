@@ -26,7 +26,7 @@ That is it. You can now generate SVG sprites plus more.
 ##Config Options:
 After cloning a copy of this repository to your local machine you can make changes to the local Grunt file for tool configuration changes. Some helpful config changes below.
 
--Create Vertical, Horizontal or Condensed SVG Sprite. Open your 'Gruntfile.js' and find 'layout' object in 'CSS' section. Layout can be changed to "vertical", "horizontal", "diagonal" or "packed". Make the changes to the file and run grunt.
+1. Create Vertical, Horizontal or Condensed SVG Sprite. Open your 'Gruntfile.js' and find 'layout' object in 'CSS' section. Layout can be changed to "vertical", "horizontal", "diagonal" or "packed". Make the changes to the file and run grunt.
 ```
 css: {
        layout: 'packed',
@@ -35,7 +35,7 @@ css: {
         }
      }
 ```
--Spacing between individual icons in the sprite file. Open your 'Gruntfile.js' and find 'padding' object in 'shape' section. Provide a integer value for spacing around icons in the sprite file. Single pixel value which is then applied to all four edges.
+2. Spacing between individual icons in the sprite file. Open your 'Gruntfile.js' and find 'padding' object in 'shape' section. Provide a integer value for spacing around icons in the sprite file. Single pixel value which is then applied to all four edges.
 ```
 shape:{
         spacing: {
