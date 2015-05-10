@@ -15,7 +15,7 @@ Step 3 ) Once you are in the project directory, type in the following command: s
 
 Step 4 ) Now all packages have been included into a 'node_modules' directory. Once this is complete type 'grunt' into the command line and we are up and running.
 
-That is it. You can now generate SVG sprites.
+That is it. You can now generate SVG sprites plus more.
 
 ##Features:
 1. Generates SVG sprite from individaul SVG's.
