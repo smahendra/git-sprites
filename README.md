@@ -47,6 +47,6 @@ This tool uses the following npm packages:
     "grunt-contrib-clean"
     "grunt-svg-sprite"
     "grunt-svg2png"
-    "grunt-svgmin"
+    "grunt-svgmin".
 
 Tested with - node: v0.12.2 and v0.10.33.
