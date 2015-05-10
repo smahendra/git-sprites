@@ -26,7 +26,7 @@ That is it. You can now generate SVG sprites plus more.
 ##Config Options:
 After cloning a copy of this repository to your local machine you can make changes to the local Grunt file for tool configuration changes. Some helpful config changes below.
 
-1. Create Vertical, Horizontol or Package SVG Sprite. Open your 'Gruntfile.js' and find 'layout' object in 'CSS' section. Layout can be changed to "vertical", "horizontal", "diagonal" or "packed" (with the latter being the most compact type).
+1. Create Vertical, Horizontol or Package SVG Sprite. Open your 'Gruntfile.js' and find 'layout' object in 'CSS' section. Layout can be changed to "vertical", "horizontal", "diagonal" or "packed".
 ```
 css: {
        layout: 'packed',
