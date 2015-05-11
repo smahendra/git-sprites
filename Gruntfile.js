@@ -29,7 +29,8 @@ module.exports = function(grunt) {
                             layout: 'packed',
                             render: {
                                 css : true
-                             }
+                             },
+                             dimensions: true
                             }
                           }
                         }
