@@ -21,12 +21,12 @@ module.exports = function(grunt) {
                 options: {
                     shape:{
                             spacing: {
-                                padding: 5
+                                padding: 0
                             }
                           },
                     mode: {
                         css: {
-                            layout: 'packed',
+                            layout: 'horizontal',
                             render: {
                                 css : true
                              },
