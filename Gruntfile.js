@@ -26,7 +26,7 @@ module.exports = function(grunt) {
                           },
                     mode: {
                         css: {
-                            layout: 'horizontal',
+                            layout: 'vertical',
                             render: {
                                 css : true
                              },
